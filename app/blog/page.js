@@ -1,3 +1,5 @@
+import GoBack from "@/app/GoBack/GoBack";
+
 export default async function Page() {
   let count = 0;
   const data = await fetch("https://api.vercel.app/blog");
@@ -6,14 +8,19 @@ export default async function Page() {
   const unique = [...new Set(categories)];
   return (
     <>
+      <GoBack />
       <ul>
         {unique.map((item) => {
           count++;
-          return <li key={item}>{item}</li>;
+          return (
+            <li className="list" key={item}>
+              {item}
+            </li>
+          );
         })}
       </ul>
       <br></br>
-      <p>
+      <p className="box">
         <strong>There are {count} unique categories </strong>
       </p>
     </>

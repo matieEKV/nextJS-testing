@@ -1,5 +1,6 @@
 "use client";
 
+import GoBack from "@/app/GoBack/GoBack";
 import { useParams } from "next/navigation";
 
 export default function Page() {
@@ -16,6 +17,7 @@ export default function Page() {
   const string = newArray.join(" ");
   return (
     <div className="thePage">
+      <GoBack />
       <h1 className="heading">
         <span className="flowers">❀❀❀❀ </span>
         <em>{string}</em>

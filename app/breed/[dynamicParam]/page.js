@@ -1,3 +1,5 @@
+import GoBack from "@/app/GoBack/GoBack";
+
 export default async function Page(props) {
   // const breed = params.dynamicParam;
   console.log(props.params);
@@ -11,6 +13,7 @@ export default async function Page(props) {
   const toUpper = breed.toUpperCase();
   return (
     <div className="thePage">
+      <GoBack />
       <h1>
         Here is a random image of a <strong>{toUpper}</strong>
       </h1>
