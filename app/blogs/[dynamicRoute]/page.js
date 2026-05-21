@@ -15,8 +15,12 @@ export default function Page() {
 
   const string = newArray.join(" ");
   return (
-    <h1 style={{ textAlign: "center", marginTop: "10rem", fontSize: "3rem" }}>
-      <strong>{string}</strong>
-    </h1>
+    <div className="thePage">
+      <h1 className="heading">
+        <span className="flowers">❀❀❀❀ </span>
+        <em>{string}</em>
+        <span className="flowers"> ❀❀❀❀</span>
+      </h1>
+    </div>
   );
 }
