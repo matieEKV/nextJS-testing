@@ -4,7 +4,9 @@ export default function Page() {
   return (
     <ul>
       {articles.map((article) => (
-        <li key={article.id}>{article.content}</li>
+        <li className="list" key={article.id}>
+          {article.category}
+        </li>
       ))}
     </ul>
   );
