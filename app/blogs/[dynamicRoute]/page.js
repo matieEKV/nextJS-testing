@@ -5,7 +5,6 @@ import { useParams } from "next/navigation";
 export default function Page() {
   const params = useParams();
   const route = params.dynamicRoute;
-  console.log(params);
 
   const wordsArray = route.split("-");
   const newArray = wordsArray.map((word) => {
